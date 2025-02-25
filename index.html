@@ -37,6 +37,8 @@
             --scroll-timing: 0.5s;
             --hover-timing: 0.2s;
             --focus-ring-color: rgba(37, 99, 235, 0.5);
+            --header-height: 4rem;
+            --header-height-sm: 3.5rem;
         }
 
         html {
@@ -251,20 +253,20 @@
         }
 
         .section-spacing {
-            padding-top: 2rem;
+            padding-top: 3rem;
             padding-bottom: 2rem;
         }
 
         @media (min-width: 320px) {
             .section-spacing {
-                padding-top: 3rem;
+                padding-top: 4rem;
                 padding-bottom: 3rem;
             }
         }
 
         @media (min-width: 640px) {
             .section-spacing {
-                padding-top: 4rem;
+                padding-top: 5rem;
                 padding-bottom: 4rem;
             }
         }
@@ -327,6 +329,13 @@
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             border-bottom: 1px solid var(--border);
+            height: var(--header-height-sm);
+        }
+
+        @media (min-width: 640px) {
+            .header-glass {
+                height: var(--header-height);
+            }
         }
 
         :focus-visible {
@@ -405,6 +414,16 @@
         @media (min-width: 1400px) {
             .container {
                 max-width: 1320px;
+            }
+        }
+
+        main {
+            padding-top: var(--header-height-sm);
+        }
+
+        @media (min-width: 640px) {
+            main {
+                padding-top: var(--header-height);
             }
         }
     </style>
